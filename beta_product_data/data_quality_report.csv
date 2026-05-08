@@ -1,0 +1,60 @@
+ticker,company_name,sector,fiscal_year,issue_type,column,value,description,quality_level
+DKSH.SW,DKSH Holding AG,Distribution / Services,2015,missing_free_cash_flow_final,free_cash_flow_final_m,,free_cash_flow_final_m absent — no reported FCF and op_cf/capex unavailable,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2015,missing_public_field,free_cash_flow,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2015,missing_public_field,operating_cash_flow,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2015,missing_public_field,total_equity,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2016,missing_free_cash_flow_final,free_cash_flow_final_m,,free_cash_flow_final_m absent — no reported FCF and op_cf/capex unavailable,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2016,missing_public_field,free_cash_flow,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2016,missing_public_field,operating_cash_flow,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2016,missing_public_field,total_equity,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2018,free_cash_flow_calculated,free_cash_flow_final_m,144.6,FCF = op_cf - abs(capex) = 144.6 CHF M; not reported by company,info
+DKSH.SW,DKSH Holding AG,Distribution / Services,2018,missing_public_field,total_equity,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2019,missing_public_field,total_equity,,Public beta field is missing in financials.csv.,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2020,negative_cash,cash_m,-680.8,cash_m = -680.8 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2021,negative_cash,cash_m,-673.7,cash_m = -673.7 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2022,negative_cash,cash_m,-636.4,cash_m = -636.4 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2023,negative_cash,cash_m,-687.2,cash_m = -687.2 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2024,negative_cash,cash_m,-609.1,cash_m = -609.1 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+DKSH.SW,DKSH Holding AG,Distribution / Services,2025,negative_cash,cash_m,-538.4,cash_m = -538.4 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+GEBN.SW,Geberit AG,Industrials,2015,missing_dividend_per_share,dividend_per_share,,dividend_per_share absent — dividend yield will be None,warning
+GEBN.SW,Geberit AG,Industrials,2015,missing_dividend_yield,dividend_yield_pct,,dividend_yield_pct unavailable — dividend_per_share absent,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2015,free_cash_flow_calculated,free_cash_flow_final_m,-34.029,FCF = op_cf - abs(capex) = -34.029 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2016,free_cash_flow_calculated,free_cash_flow_final_m,-41.941,FCF = op_cf - abs(capex) = -41.941 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2017,free_cash_flow_calculated,free_cash_flow_final_m,-37.57,FCF = op_cf - abs(capex) = -37.57 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2018,free_cash_flow_calculated,free_cash_flow_final_m,-139.673,FCF = op_cf - abs(capex) = -139.673 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2019,free_cash_flow_calculated,free_cash_flow_final_m,-93.294,FCF = op_cf - abs(capex) = -93.294 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2019,missing_dividend_per_share,dividend_per_share,,dividend_per_share absent — dividend yield will be None,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2019,missing_dividend_yield,dividend_yield_pct,,dividend_yield_pct unavailable — dividend_per_share absent,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2020,missing_capex,capex_m,,capex_m absent — FCF proxy unavailable,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2020,missing_free_cash_flow_final,free_cash_flow_final_m,,free_cash_flow_final_m absent — no reported FCF and op_cf/capex unavailable,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2020,missing_public_field,free_cash_flow,,Public beta field is missing in financials.csv.,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2021,free_cash_flow_calculated,free_cash_flow_final_m,-76.204,FCF = op_cf - abs(capex) = -76.204 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2022,free_cash_flow_calculated,free_cash_flow_final_m,-71.22,FCF = op_cf - abs(capex) = -71.22 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2023,missing_capex,capex_m,,capex_m absent — FCF proxy unavailable,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2023,missing_free_cash_flow_final,free_cash_flow_final_m,,free_cash_flow_final_m absent — no reported FCF and op_cf/capex unavailable,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2023,missing_public_field,free_cash_flow,,Public beta field is missing in financials.csv.,warning
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2024,free_cash_flow_calculated,free_cash_flow_final_m,21.085,FCF = op_cf - abs(capex) = 21.085 CHF M; not reported by company,info
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2025,free_cash_flow_calculated,free_cash_flow_final_m,-88.515,FCF = op_cf - abs(capex) = -88.515 CHF M; not reported by company,info
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2015,missing_capex,capex_m,,capex_m absent — FCF proxy unavailable,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2016,missing_capex,capex_m,,capex_m absent — FCF proxy unavailable,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2016,missing_public_field,ebit,,Public beta field is missing in financials.csv.,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2017,missing_capex,capex_m,,capex_m absent — FCF proxy unavailable,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2018,missing_public_field,ebit,,Public beta field is missing in financials.csv.,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2018,negative_cash,cash_m,-474.0,cash_m = -474.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2019,free_cash_flow_calculated,free_cash_flow_final_m,1543.0,FCF = op_cf - abs(capex) = 1543.0 CHF M; not reported by company,info
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2019,negative_cash,cash_m,-328.0,cash_m = -328.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2020,free_cash_flow_calculated,free_cash_flow_final_m,1840.0,FCF = op_cf - abs(capex) = 1840.0 CHF M; not reported by company,info
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2020,negative_cash,cash_m,-340.0,cash_m = -340.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2021,free_cash_flow_calculated,free_cash_flow_final_m,1758.0,FCF = op_cf - abs(capex) = 1758.0 CHF M; not reported by company,info
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2021,missing_public_field,total_assets,,Public beta field is missing in financials.csv.,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2021,negative_cash,cash_m,-401.0,cash_m = -401.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2022,missing_public_field,total_assets,,Public beta field is missing in financials.csv.,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2022,negative_cash,cash_m,-121.0,cash_m = -121.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2023,negative_cash,cash_m,-148.0,cash_m = -148.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2024,missing_public_field,total_assets,,Public beta field is missing in financials.csv.,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2024,missing_public_field,total_equity,,Public beta field is missing in financials.csv.,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2024,negative_cash,cash_m,-1523.0,cash_m = -1523.0 CHF M — likely overdraft netting in source report; used as-is in EV / net_debt calculations,warning
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2025,free_cash_flow_calculated,free_cash_flow_final_m,2285.0,FCF = op_cf - abs(capex) = 2285.0 CHF M; not reported by company,info
+SIKA.SW,Sika AG,Chemicals / Construction Materials,2015,per_share_not_comparable_pre_split,"pe_ratio,dividend_yield_pct",,Sika 2015-2017 EPS/DPS are pre-split registered-share values and are not comparable with split-adjusted market prices.,warning
+SIKA.SW,Sika AG,Chemicals / Construction Materials,2016,per_share_not_comparable_pre_split,"pe_ratio,dividend_yield_pct",,Sika 2015-2017 EPS/DPS are pre-split registered-share values and are not comparable with split-adjusted market prices.,warning
+SIKA.SW,Sika AG,Chemicals / Construction Materials,2017,per_share_not_comparable_pre_split,"pe_ratio,dividend_yield_pct",,Sika 2015-2017 EPS/DPS are pre-split registered-share values and are not comparable with split-adjusted market prices.,warning

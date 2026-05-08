@@ -1,0 +1,55 @@
+ticker,company_name,fiscal_year,source_type,source_name,source_url,source_file,retrieval_date,status,notes
+DKSH.SW,DKSH Holding AG,2015,annual_report_pdf,Annual report,,DKSH_2015.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2016,annual_report_pdf,Annual report,,DKSH_2016.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2018,annual_report_pdf,Annual report,,DKSH_2018.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2019,annual_report_pdf,Annual report,,DKSH_2019.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2020,annual_report_pdf,Annual report,,DKSH_2020.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2021,annual_report_pdf,Annual report,,DKSH_2021.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2022,annual_report_pdf,Annual report,,DKSH_2022.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2023,annual_report_pdf,Annual report,,DKSH_2023.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2024,annual_report_pdf,Annual report,,DKSH_2024.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+DKSH.SW,DKSH Holding AG,2025,annual_report_pdf,Annual report,,DKSH_2025.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+GEBN.SW,Geberit AG,2015,Annual Report,Annual report,https://www.annualreports.com/HostedData/AnnualReportArchive/g/geberit_2015.pdf,pdfs/GEBN.SW/GEBN.SW_2015.pdf,2026-05-07 01:27:22,downloaded,third_party_archive; official company source unavailable; PDF manually identified as Geberit Annual Report 2015
+GEBN.SW,Geberit AG,2016,Annual Report,Annual report,https://reports.geberit.com/annual-report/2021/_assets/downloads/ext-annual-report-2016.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2016.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2021/services/downloads.html; File type: external_archive; Size: 5,437,378 bytes"
+GEBN.SW,Geberit AG,2017,Annual Report,Annual report,https://reports.geberit.com/annual-report/2022/_assets/downloads/ext-annual-report-2017.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2017.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2022/services/downloads.html; File type: external_archive; Size: 6,079,572 bytes"
+GEBN.SW,Geberit AG,2018,Annual Report,Annual report,https://reports.geberit.com/annual-report/2023/_assets/downloads/ext-annual-report-2018.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2018.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2023/services/downloads.html; File type: external_archive; Size: 5,434,932 bytes"
+GEBN.SW,Geberit AG,2019,Annual Report,Annual report,https://reports.geberit.com/annual-report/2025/_assets/downloads/ext-annual-report-2019.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2019.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2025/services/downloads.html; File type: external_archive; Size: 3,483,236 bytes"
+GEBN.SW,Geberit AG,2020,Annual Report,Annual report,https://reports.geberit.com/annual-report/2025/_assets/downloads/ext-annual-report-2020.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2020.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2025/services/downloads.html; File type: external_archive; Size: 4,734,820 bytes"
+GEBN.SW,Geberit AG,2021,Annual Report,Annual report,https://reports.geberit.com/annual-report/2021/_assets/downloads/entire-geberit-ar21.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2021.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2021/services/downloads.html; File type: full_annual_report; Size: 3,962,781 bytes"
+GEBN.SW,Geberit AG,2022,Annual Report,Annual report,https://reports.geberit.com/annual-report/2022/_assets/downloads/geberit-ar22-en-entire.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2022.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2022/services/downloads.html; File type: full_annual_report; Size: 3,526,881 bytes"
+GEBN.SW,Geberit AG,2023,Annual Report,Annual report,https://reports.geberit.com/annual-report/2023/_assets/downloads/geberit-ar23-en-entire.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2023.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2023/services/downloads.html; File type: full_annual_report; Size: 2,536,292 bytes"
+GEBN.SW,Geberit AG,2024,Annual Report,Annual report,https://reports.geberit.com/annual-report/2024/_assets/downloads/geberit-ar24-en-entire.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2024.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2024/services/downloads.html; File type: full_annual_report; Size: 3,142,797 bytes"
+GEBN.SW,Geberit AG,2025,Annual Report,Annual report,https://reports.geberit.com/annual-report/2025/_assets/downloads/geberit-ar25-en-entire.pdf,/mnt/agents/output/pdfs/GEBN.SW/GEBN.SW_2025.pdf,2026-05-07 07:16:54,downloaded,"Source page: https://reports.geberit.com/annual-report/2025/services/downloads.html; File type: full_annual_report; Size: 7,798,644 bytes"
+HIAG.SW,HIAG Immobilien Holding AG,2015,annual_report_pdf,Annual report,,HIAG_2015.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2016,annual_report_pdf,Annual report,,HIAG_2016.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2017,annual_report_pdf,Annual report,,HIAG_2017.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2018,annual_report_pdf,Annual report,,HIAG_2018.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2019,annual_report_pdf,Annual report,,HIAG_2019.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2020,annual_report_pdf,Annual report,,HIAG_2020.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2021,annual_report_pdf,Annual report,,HIAG_2021.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2022,annual_report_pdf,Annual report,,HIAG_2022.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2023,annual_report_pdf,Annual report,,HIAG_2023.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2024,annual_report_pdf,Annual report,,HIAG_2024.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+HIAG.SW,HIAG Immobilien Holding AG,2025,annual_report_pdf,Annual report,,HIAG_2025.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2015,annual_report_pdf,Annual report,,SCMN_2015.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2016,annual_report_pdf,Annual report,,SCMN_2016.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2017,annual_report_pdf,Annual report,,SCMN_2017.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2018,annual_report_pdf,Annual report,,SCMN_2018.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2019,annual_report_pdf,Annual report,,SCMN_2019.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2020,annual_report_pdf,Annual report,,SCMN_2020.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2021,annual_report_pdf,Annual report,,SCMN_2021.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2022,annual_report_pdf,Annual report,,SCMN_2022.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2023,annual_report_pdf,Annual report,,SCMN_2023.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2024,annual_report_pdf,Annual report,,SCMN_2024.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SCMN.SW,Swisscom AG,2025,annual_report_pdf,Annual report,,SCMN_2025.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2015,annual_report_pdf,Annual report,,SIKA.SW_2015.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2016,annual_report_pdf,Annual report,,SIKA.SW_2016.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2017,annual_report_pdf,Annual report,,SIKA.SW_2017.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2018,annual_report_pdf,Annual report,,SIKA.SW_2018.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2019,annual_report_pdf,Annual report,,SIKA.SW_2019.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2020,annual_report_pdf,Annual report,,SIKA.SW_2020.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2021,annual_report_pdf,Annual report,,SIKA.SW_2021.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2022,annual_report_pdf,Annual report,,SIKA.SW_2022.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2023,annual_report_pdf,Annual report,,SIKA.SW_2023.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2024,annual_report_pdf,Annual report,,SIKA.SW_2024.pdf,,local_pdf_available,Source URL not yet documented in manifest.
+SIKA.SW,Sika AG,2025,annual_report_pdf,Annual report,,SIKA.SW_2025.pdf,,local_pdf_available,Source URL not yet documented in manifest.
