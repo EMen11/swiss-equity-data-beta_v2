@@ -1,6 +1,7 @@
 ticker,company_name,sector,industry,fiscal_year,currency,unit,revenue,ebitda,ebit,net_income,eps,total_assets,total_equity,total_debt,cash,net_debt,operating_cash_flow,capex,free_cash_flow,dividend_per_share,equity_ratio_pct,core_completeness_score,full_completeness_score,extraction_status,source_file,notes
 DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,2015,CHF,CHF_millions,10050.8,341.8,270.2,199.6,3.12,4095.8,,102.6,,,,-39.3,,1.302,,4/7,9/13,REVIEW,DKSH_2015.pdf,
 DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,2016,CHF,CHF_millions,10505.2,332.5,293.0,213.0,3.21,4415.3,,98.8,,,,-32.2,,1.502,,4/7,9/13,REVIEW,DKSH_2016.pdf,
+DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,2017,CHF,CHF_millions,11006.4,334.9,297.0,213.3,3.18,4645.0,1633.7,98.9,443.1,-344.20000000000005,166.4,-25.8,139.5,1.652,35.17,7/7,13/13,GO,DKSH_2017.pdf,
 DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,2018,CHF,CHF_millions,11344.6,308.2,263.6,260.3,3.92,4895.4,,140.5,,,179.9,-35.3,144.6,1.852,,5/7,10/13,REVIEW,DKSH_2018.pdf,
 DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,2019,CHF,CHF_millions,11579.2,401.2,265.4,176.1,2.65,5353.0,,279.7,431.9,-152.2,294.2,-45.2,156.7,1.902,,6/7,12/13,GO,DKSH_2019.pdf,
 DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,2020,CHF,CHF_millions,10742.2,386.7,257.5,164.8,2.42,5118.0,1799.6,338.6,-680.8,1019.4,325.3,-31.2,210.2,1.95,35.16,7/7,13/13,GO,DKSH_2020.pdf,

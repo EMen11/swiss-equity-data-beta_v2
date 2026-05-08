@@ -1,5 +1,5 @@
 ticker,company_name,sector,industry,country,exchange,currency,reporting_unit,validation_status,notes,first_year,last_year,years_available
-DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,Switzerland,SIX Swiss Exchange,CHF,CHF millions,validated,Public beta company; historical coverage from annual reports.,2015,2025,10
+DKSH.SW,DKSH Holding AG,Distribution / Services,Market Expansion Services,Switzerland,SIX Swiss Exchange,CHF,CHF millions,validated,Public beta company; historical coverage from annual reports.,2015,2025,11
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,Property / Real Estate,Switzerland,SIX Swiss Exchange,CHF,CHF millions after normalization; source reports in TCHF,validated,Real estate company; sector-specific labels handled.,2015,2025,11
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,Telecommunications,Switzerland,SIX Swiss Exchange,CHF,CHF millions,validated,Swisscom-specific extraction logic used for reported EBITDA and debt.,2015,2025,11
 GEBN.SW,Geberit AG,Industrials,Building Products,Switzerland,SIX Swiss Exchange,CHF,CHF millions,validated,2015 source comes from third-party archive; remaining years from official Geberit sources where available.,2015,2025,11
