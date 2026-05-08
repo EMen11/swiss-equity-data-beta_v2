@@ -13,14 +13,14 @@ st.title("Data Quality Overview")
 st.markdown(
     """
 This page summarizes the quality checks applied to the public beta dataset.
-Notes are classified by severity so that methodological notes, acceptable limitations
+Notes are classified by severity so methodological notes, acceptable limitations
 and review items are clearly separated.
 """
 )
 
 # ── Load data ──────────────────────────────────────────────────────────────────
-summary_df  = load_quality_summary()   # 54 rows — company-year level
-report_df   = load_quality()           # 63 rows — individual notes
+summary_df  = load_quality_summary()
+report_df   = load_quality()
 sources_df  = load_sources()
 companies_df = load_companies()
 
@@ -59,18 +59,22 @@ if summary_df.empty:
 else:
     status_col = "overall_quality_status" if "overall_quality_status" in summary_df.columns else None
 
-    obs_total      = len(summary_df)
-    high_conf      = int((summary_df[status_col] == "High confidence").sum())   if status_col else "—"
-    usable_notes   = int((summary_df[status_col] == "Usable with notes").sum()) if status_col else "—"
-    needs_review   = int((summary_df[status_col] == "Needs review").sum())      if status_col else "—"
-    critical_issues = int((summary_df[status_col] == "Critical issue").sum())   if status_col else "—"
+    obs_total = len(summary_df)
+    if status_col:
+        normalized_status = summary_df[status_col].fillna("").astype(str).str.strip()
+        high_conf = int((normalized_status == "High confidence").sum())
+        usable_notes = int((normalized_status == "Usable with notes").sum())
+        needs_review = int((normalized_status == "Needs review").sum())
+        critical_issues = int(normalized_status.str.startswith("Critical").sum())
+    else:
+        high_conf = usable_notes = needs_review = critical_issues = "—"
 
     k1, k2, k3, k4, k5 = st.columns(5)
     k1.metric("Company-year observations", obs_total)
     k2.metric("High confidence",           high_conf)
     k3.metric("Usable with notes",         usable_notes)
     k4.metric("Needs review",              needs_review)
-    k5.metric("Critical issues",           critical_issues if critical_issues != "—" else 0)
+    k5.metric("Critical issues",           critical_issues)
 
     if critical_issues == 0 or critical_issues == "—":
         st.success("No critical issues detected in the current public beta dataset.")
@@ -82,23 +86,16 @@ st.divider()
 # SECTION 2 — Severity breakdown from report
 # ══════════════════════════════════════════════════════════════════════════════
 st.markdown("### Severity Breakdown")
-st.caption("Based on individual documented notes from the detailed quality report.")
+st.caption("Based on detailed notes from data_quality_report.csv.")
 
 if not report_df.empty and "severity" in report_df.columns:
     sev_order = ["INFO", "WARNING", "REVIEW", "CRITICAL"]
-    sev_counts = report_df["severity"].value_counts()
+    sev_counts = report_df["severity"].fillna("").astype(str).str.strip().str.upper().value_counts()
 
     sev_cols = st.columns(4)
-    labels = {
-        "INFO":     ("Methodology notes", "INFO"),
-        "WARNING":  ("Warnings",           "WARNING"),
-        "REVIEW":   ("Review items",       "REVIEW"),
-        "CRITICAL": ("Critical",           "CRITICAL"),
-    }
     for i, key in enumerate(sev_order):
-        display_name, _ = labels[key]
         count = int(sev_counts.get(key, 0))
-        sev_cols[i].metric(display_name, count)
+        sev_cols[i].metric(key, count)
 else:
     st.caption("Severity data not available.")
 
@@ -135,7 +132,7 @@ else:
             sum_labels  = sorted(ticker_label(t) for t in sum_tickers)
             sum_l2t     = {ticker_label(t): t for t in sum_tickers}
             sel_sum_labels = st.multiselect(
-                "Company", options=sum_labels, default=sum_labels, key="sum_ticker",
+                "Ticker", options=sum_labels, default=sum_labels, key="sum_ticker",
                 help="Search by ticker or company name.",
             )
             sel_sum_tickers = [sum_l2t[l] for l in sel_sum_labels if l in sum_l2t]
@@ -146,7 +143,7 @@ else:
     with sf2:
         if "fiscal_year" in summary_df.columns:
             sum_years = sorted(summary_df["fiscal_year"].dropna().unique().tolist())
-            sel_sum_years = st.multiselect("Fiscal Year", options=sum_years, default=sum_years, key="sum_year")
+            sel_sum_years = st.multiselect("Fiscal year", options=sum_years, default=sum_years, key="sum_year")
         else:
             sel_sum_years = None
 
@@ -154,7 +151,7 @@ else:
     with sf3:
         if status_col:
             statuses = sorted(summary_df[status_col].dropna().unique().tolist())
-            sel_statuses = st.multiselect("Quality status", options=statuses, default=statuses, key="sum_status")
+            sel_statuses = st.multiselect("Overall quality status", options=statuses, default=statuses, key="sum_status")
         else:
             sel_statuses = None
 
@@ -191,7 +188,7 @@ st.caption("Individual documented notes from the quality report, one row per iss
 if report_df.empty:
     st.warning("Detailed quality report not available.")
 else:
-    rf1, rf2, rf3, rf4 = st.columns(4)
+    rf1, rf2, rf3, rf4, rf5 = st.columns(5)
 
     # Company filter
     with rf1:
@@ -200,7 +197,7 @@ else:
             rep_labels  = sorted(ticker_label(t) for t in rep_tickers)
             rep_l2t     = {ticker_label(t): t for t in rep_tickers}
             sel_rep_labels = st.multiselect(
-                "Company", options=rep_labels, default=rep_labels, key="rep_ticker",
+                "Ticker", options=rep_labels, default=rep_labels, key="rep_ticker",
                 help="Search by ticker or company name.",
             )
             sel_rep_tickers = [rep_l2t[l] for l in sel_rep_labels if l in rep_l2t]
@@ -211,7 +208,7 @@ else:
     with rf2:
         if "fiscal_year" in report_df.columns:
             rep_years = sorted(report_df["fiscal_year"].dropna().unique().tolist())
-            sel_rep_years = st.multiselect("Fiscal Year", options=rep_years, default=rep_years, key="rep_year")
+            sel_rep_years = st.multiselect("Fiscal year", options=rep_years, default=rep_years, key="rep_year")
         else:
             sel_rep_years = None
 
@@ -223,16 +220,25 @@ else:
         else:
             sel_severities = None
 
-    # Public label / issue type filter
+    # Public label filter
     with rf4:
-        label_col = next((c for c in ["public_label", "issue_type"] if c in report_df.columns), None)
-        if label_col:
-            pub_labels = sorted(report_df[label_col].dropna().unique().tolist())
+        if "public_label" in report_df.columns:
+            pub_labels = sorted(report_df["public_label"].dropna().unique().tolist())
             sel_pub_labels = st.multiselect(
-                "Label / Issue type", options=pub_labels, default=pub_labels, key="rep_label",
+                "Public label", options=pub_labels, default=pub_labels, key="rep_label",
             )
         else:
             sel_pub_labels = None
+
+    # Issue type filter
+    with rf5:
+        if "issue_type" in report_df.columns:
+            issue_types = sorted(report_df["issue_type"].dropna().unique().tolist())
+            sel_issue_types = st.multiselect(
+                "Issue type", options=issue_types, default=issue_types, key="rep_issue_type",
+            )
+        else:
+            sel_issue_types = None
 
     # Apply filters
     if not sel_rep_tickers and "ticker" in report_df.columns:
@@ -245,8 +251,10 @@ else:
             filtered_rep = filtered_rep[filtered_rep["fiscal_year"].isin(sel_rep_years)]
         if sel_severities and "severity" in filtered_rep.columns:
             filtered_rep = filtered_rep[filtered_rep["severity"].isin(sel_severities)]
-        if sel_pub_labels and label_col:
-            filtered_rep = filtered_rep[filtered_rep[label_col].isin(sel_pub_labels)]
+        if sel_pub_labels and "public_label" in filtered_rep.columns:
+            filtered_rep = filtered_rep[filtered_rep["public_label"].isin(sel_pub_labels)]
+        if sel_issue_types and "issue_type" in filtered_rep.columns:
+            filtered_rep = filtered_rep[filtered_rep["issue_type"].isin(sel_issue_types)]
 
         rep_display_cols = [c for c in [
             "ticker", "company_name", "sector", "fiscal_year",
