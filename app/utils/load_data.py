@@ -30,6 +30,11 @@ def load_quality() -> pd.DataFrame:
 
 
 @st.cache_data
+def load_quality_summary() -> pd.DataFrame:
+    return _safe_read("data_quality_summary.csv")
+
+
+@st.cache_data
 def load_companies() -> pd.DataFrame:
     return _safe_read("company_master.csv")
 
