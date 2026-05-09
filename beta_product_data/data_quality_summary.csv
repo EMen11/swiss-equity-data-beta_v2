@@ -1,16 +1,16 @@
 ticker,company_name,sector,fiscal_year,info_count,warning_count,review_count,critical_count,total_flags,overall_quality_status,public_summary
-DKSH.SW,DKSH Holding AG,Distribution / Services,2015,0,1,3,0,4,Needs review,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
-DKSH.SW,DKSH Holding AG,Distribution / Services,2016,0,1,3,0,4,Needs review,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+DKSH.SW,DKSH Holding AG,Distribution / Services,2015,0,0,0,0,0,High confidence,No issues detected.
+DKSH.SW,DKSH Holding AG,Distribution / Services,2016,0,0,0,0,0,High confidence,No issues detected.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2017,0,0,0,0,0,High confidence,No issues detected.
-DKSH.SW,DKSH Holding AG,Distribution / Services,2018,1,0,1,0,2,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated rather than directly reported.
-DKSH.SW,DKSH Holding AG,Distribution / Services,2019,0,0,1,0,1,Usable with notes,Some fields are missing and flagged for transparency.
+DKSH.SW,DKSH Holding AG,Distribution / Services,2018,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
+DKSH.SW,DKSH Holding AG,Distribution / Services,2019,0,0,0,0,0,High confidence,No issues detected.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2020,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2021,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2022,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2023,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2024,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 DKSH.SW,DKSH Holding AG,Distribution / Services,2025,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
-GEBN.SW,Geberit AG,Industrials,2015,0,2,0,0,2,High confidence,Some values are calculated or have acceptable limitations.
+GEBN.SW,Geberit AG,Industrials,2015,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 GEBN.SW,Geberit AG,Industrials,2016,0,0,0,0,0,High confidence,No issues detected.
 GEBN.SW,Geberit AG,Industrials,2017,0,0,0,0,0,High confidence,No issues detected.
 GEBN.SW,Geberit AG,Industrials,2018,0,0,0,0,0,High confidence,No issues detected.
@@ -25,11 +25,11 @@ HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2015,1,0,0,0,1,High confidence,So
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2016,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2017,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2018,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
-HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2019,1,2,0,0,3,High confidence,Some values are calculated or have acceptable limitations. Some values are calculated rather than directly reported.
-HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2020,0,2,1,0,3,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2019,1,1,0,0,2,High confidence,Some values are calculated or have acceptable limitations. Some values are calculated rather than directly reported.
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2020,0,2,0,0,2,High confidence,Some values are calculated or have acceptable limitations.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2021,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2022,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
-HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2023,0,2,1,0,3,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2023,0,2,0,0,2,High confidence,Some values are calculated or have acceptable limitations.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2024,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2025,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2015,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
