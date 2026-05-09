@@ -33,15 +33,15 @@ HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2023,0,2,1,0,3,Usable with notes,
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2024,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 HIAG.SW,HIAG Immobilien Holding AG,Real Estate,2025,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2015,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
-SCMN.SW,Swisscom AG,Telecom / Infrastructure,2016,0,1,1,0,2,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2016,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2017,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
-SCMN.SW,Swisscom AG,Telecom / Infrastructure,2018,0,1,1,0,2,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2018,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2019,1,1,0,0,2,High confidence,Some values are calculated or have acceptable limitations. Some values are calculated rather than directly reported.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2020,1,1,0,0,2,High confidence,Some values are calculated or have acceptable limitations. Some values are calculated rather than directly reported.
-SCMN.SW,Swisscom AG,Telecom / Infrastructure,2021,1,1,1,0,3,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations. Some values are calculated rather than directly reported.
-SCMN.SW,Swisscom AG,Telecom / Infrastructure,2022,0,1,1,0,2,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2021,1,1,0,0,2,High confidence,Some values are calculated or have acceptable limitations. Some values are calculated rather than directly reported.
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2022,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2023,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
-SCMN.SW,Swisscom AG,Telecom / Infrastructure,2024,0,1,2,0,3,Usable with notes,Some fields are missing and flagged for transparency. Some values are calculated or have acceptable limitations.
+SCMN.SW,Swisscom AG,Telecom / Infrastructure,2024,0,1,0,0,1,High confidence,Some values are calculated or have acceptable limitations.
 SCMN.SW,Swisscom AG,Telecom / Infrastructure,2025,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 SIKA.SW,Sika AG,Chemicals / Construction Materials,2015,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
 SIKA.SW,Sika AG,Chemicals / Construction Materials,2016,1,0,0,0,1,High confidence,Some values are calculated rather than directly reported.
