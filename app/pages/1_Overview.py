@@ -91,6 +91,23 @@ with st.expander("View reliability note count"):
 
 st.divider()
 
+# ── v5.2 product direction ────────────────────────────────────────────────────
+st.markdown("### v5.2 Product Direction")
+st.markdown(
+    """
+Swiss Equity Data now follows a four-layer direction:
+
+1. Data Layer
+2. Coverage & Reliability Layer
+3. Basic Analytics Layer
+4. Controlled API / MCP Access
+
+The current public beta demonstrates the first three layers and previews the future MCP/API access layer.
+"""
+)
+
+st.divider()
+
 # ── Company coverage ───────────────────────────────────────────────────────────
 st.markdown("### Company Coverage")
 if not companies_df.empty:
@@ -161,17 +178,17 @@ road_col1, road_col2 = st.columns(2)
 with road_col1:
     st.markdown(
         """
-- Broader SMI / SPI coverage
+- Versioned Annual Data Packs
+- Broader FMP-based Swiss listed company coverage
 - Python API
-- Improved public source manifests with URLs
-- Richer basic analytics
+- Traceable PDF extraction as a validation pipeline
         """
     )
 
 with road_col2:
     st.info(
-        "An exploratory MCP layer is planned to allow AI assistants and agent-based workflows to "
-        "query verified Swiss equity fundamentals. This is designed for analysis support, not investment recommendations.",
+        "A controlled MCP/API access layer is being previewed for AI-assisted workflows. "
+        "The current public beta remains a Streamlit app with Excel/CSV exports, reliability notes and basic analytics.",
         icon="🤖",
     )
 

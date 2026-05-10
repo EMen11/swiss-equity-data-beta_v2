@@ -2,6 +2,8 @@
 
 A Streamlit web application providing normalized annual fundamentals for selected Swiss listed companies, enriched with transparent data quality metadata, exportable datasets and a basic analytics layer.
 
+This public beta is aligned with the v5.2 product direction: Annual Data Pack preview, controlled MCP / AI-ready access preview, and a PDF extractor / traceable validation pipeline roadmap.
+
 ---
 
 ## Current Beta Coverage
@@ -25,6 +27,10 @@ A Streamlit web application providing normalized annual fundamentals for selecte
 - **Analytics** — Historical trend charts, beta universe comparison, rule-based analytical flags
 - **Data Quality** — Per-field quality flags with severity levels and source manifest
 - **Exports** — Full dataset as Excel (all sheets) and individual CSV files
+- **Annual Data Pack Preview** — Excel and CSV downloads preview a future versioned, documented data pack
+- **AI / MCP Preview** — Roadmap for controlled API/MCP access from Python and AI-assisted workflows
+
+The current public beta remains a Streamlit app with Excel/CSV exports, reliability notes and basic analytics. MCP/API access is presented as a controlled access layer preview and roadmap item, not as an autonomous financial assistant.
 
 ---
 
@@ -38,6 +44,10 @@ beta_product_data/
 ├── company_master.csv      Company metadata and coverage
 ├── data_dictionary.csv     Field definitions and formulas
 └── sources.csv             Source manifest per company and year
+
+docs/
+└── images/
+    └── claude_mcp_demo.png Optional Claude Desktop MCP workflow screenshot
 
 exports/
 └── swiss_equity_data_public_beta.xlsx  Packaged Excel export (all sheets)
@@ -74,18 +84,23 @@ The app will open at `http://localhost:8501`.
 | Excel / CSV exports | Delivered (this beta) |
 | Data quality metadata | Delivered (this beta) |
 | Basic analytics layer | Delivered (this beta) |
-| More Swiss listed companies | Planned |
-| Broader SMI / SPI coverage | Planned |
+| Annual Data Pack | Previewed by current Excel / CSV exports |
+| FMP-based expansion | Planned |
+| PDF extractor / traceable validation pipeline | Planned |
 | Python API | Planned (roadmap) |
-| Exploratory MCP layer | Planned (roadmap) |
+| Controlled MCP access | Planned (roadmap) |
 | Public source URL manifest | Planned |
 
 **Python API:** A Python API is planned, but the current public beta is delivered through the Streamlit interface and exportable datasets.
 
-**MCP Layer:** An exploratory MCP layer is planned to allow AI assistants and agent-based workflows to query verified Swiss equity fundamentals. This is designed for analysis support, not investment recommendations.
+**Annual Data Pack:** The current Excel and CSV downloads are a small preview of a future versioned, documented dataset with financials, ratios, reliability notes, sources and methodology.
+
+**MCP / AI-ready Access:** A controlled MCP/API access layer is planned to allow Claude, Cursor, Kimi and other AI-assisted workflows to query maintained Swiss equity data. It is designed for analysis support, deterministic calculations and export generation from structured data.
+
+**PDF Extractor Roadmap:** Future versions are expected to use the PDF extractor as a traceable validation pipeline, including field-level provenance and reconciliation status between structured provider data and annual report extraction.
 
 ---
 
 ## Disclaimer
 
-This is a public beta. Data is sourced from publicly available annual reports and may contain missing fields or quality flags. Content is provided for research and analysis support only. This is **not investment advice**, not stock picking, and not a buy/sell recommendation product.
+This is a public beta. Data is sourced from publicly available annual reports and may contain missing fields or quality flags. Content is provided for research and analysis support only. This is **not investment advice**, not stock picking, not price prediction, and not a buy/sell recommendation product.

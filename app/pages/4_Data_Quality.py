@@ -17,6 +17,10 @@ Notes are classified by severity so methodological notes, acceptable limitations
 and review items are clearly separated.
 """
 )
+st.info(
+    "Future versions are expected to add field-level provenance and reconciliation status between "
+    "structured provider data and annual report extraction."
+)
 
 # ── Load data ──────────────────────────────────────────────────────────────────
 summary_df  = load_quality_summary()

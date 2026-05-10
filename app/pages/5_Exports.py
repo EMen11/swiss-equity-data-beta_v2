@@ -14,6 +14,16 @@ st.markdown(
     "CSV files are the public beta data layer. Excel is the packaged user export."
 )
 
+st.markdown("### Annual Data Pack Preview")
+st.markdown(
+    """
+The Excel and CSV downloads in this public beta are a small preview of the future Annual Data Pack:
+a versioned, documented dataset with financials, ratios, reliability notes, sources and methodology.
+"""
+)
+
+st.divider()
+
 st.markdown("### Excel Export (All Sheets)")
 st.markdown(
     """

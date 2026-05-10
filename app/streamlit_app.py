@@ -28,6 +28,7 @@ and a basic analytics layer.
 | Data Quality | Quality flags, sources, methodology notes |
 | Exports | Download Excel and CSV datasets |
 | Roadmap | Current beta scope and planned features |
+| AI / MCP Preview | Controlled MCP/API access direction for AI-assisted workflows |
 
 ---
 """
