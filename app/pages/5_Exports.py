@@ -83,6 +83,7 @@ for filename, loader_fn, description in csv_exports:
 
 st.divider()
 st.warning(
-    "**Disclaimer:** This is a public beta. For research and analysis support only. "
-    "Not investment advice. Data may contain missing fields or quality flags."
+    "**Disclaimer:** This app is for analysis support only. "
+    "It does not provide investment advice, buy/sell recommendations, stock picks or price predictions. "
+    "Data may contain missing fields or documented quality notes."
 )

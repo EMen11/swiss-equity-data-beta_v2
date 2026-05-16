@@ -32,10 +32,10 @@ with current_col:
     st.markdown(
         """
 - Streamlit web interface
-- 5 selected Swiss listed companies
-- Normalized annual fundamentals
+- Selected public beta universe of Swiss listed companies
+- Validated annual fundamentals with quality notes
 - Ratios and basic analytics
-- Data Coverage & Reliability notes
+- Source tracking and documented limitations
 - Excel / CSV exports
         """
     )

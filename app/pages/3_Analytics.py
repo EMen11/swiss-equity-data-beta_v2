@@ -114,8 +114,8 @@ with tab2:
 with tab3:
     st.markdown("### Beta Universe Comparison")
     st.caption(
-        "Comparison of the latest available year per company. "
-        "This is a beta universe comparison, not a sector median — the current universe has only 5 companies."
+        "Comparison of the latest available year per company across the selected public beta universe. "
+        "This is a beta universe comparison, not a sector median."
     )
 
     if rat_df.empty:
@@ -250,6 +250,6 @@ with tab4:
 
 st.divider()
 st.warning(
-    "**Disclaimer:** This is a public beta. For research and analysis support only. "
-    "Not investment advice."
+    "**Disclaimer:** This app is for analysis support only. "
+    "It does not provide investment advice, buy/sell recommendations, stock picks or price predictions."
 )

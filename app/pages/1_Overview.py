@@ -13,13 +13,15 @@ st.caption("Public Beta")
 
 st.markdown(
     """
-Swiss Equity Data is a public beta for structured Swiss equity fundamentals.
+Explore a selected public beta universe of Swiss listed companies. Swiss Equity Data is
+building a structured data layer with validated annual fundamentals, ratios, quality notes,
+documented limitations and Excel/CSV exports.
 
-The goal is to transform annual report data from selected Swiss listed companies into
-normalized, comparable and exportable datasets.
+The dataset is designed around traceability. Missing fields and limitations are documented
+instead of hidden.
 
-This beta is not a stock-picking tool. It is a data and basic analytics layer designed to help
-users explore Swiss company fundamentals faster, with transparent coverage and reliability metadata.
+A broader validated data pack is available on request, with structured Excel/CSV files,
+source tracking, field-level provenance, quality notes and documented limitations.
 """
 )
 
@@ -33,7 +35,7 @@ scope_col1, scope_col2 = st.columns(2)
 with scope_col1:
     st.markdown(
         """
-- 5 selected Swiss listed companies
+- Selected public beta universe of Swiss listed companies
 - Up to 10 years of annual fundamentals
 - Normalized financial metrics (revenue, EBITDA, EBIT, net income, FCF, balance sheet)
 - Calculated ratios (ROE, margins, leverage, valuation multiples)
@@ -162,7 +164,7 @@ with col_c:
     st.markdown(
         """
 - Historical trend charts (financials and ratios)
-- Beta universe comparison across the 5 companies
+- Beta universe comparison across the selected public beta universe
 - Rule-based analytical indicators (FCF, margins, leverage)
 - Interactive filtering and drill-down
         """
@@ -179,9 +181,9 @@ with road_col1:
     st.markdown(
         """
 - Versioned Annual Data Packs
-- Broader FMP-based Swiss listed company coverage
+- Progressive expansion of Swiss listed company coverage
 - Python API
-- Traceable PDF extraction as a validation pipeline
+- Validated data pack with source tracking and field-level provenance
         """
     )
 
@@ -194,9 +196,19 @@ with road_col2:
 
 st.divider()
 
+# ── Coverage target ────────────────────────────────────────────────────────────
+st.info(
+    "Long-term target: around 220 Swiss listed companies. "
+    "The current public beta covers a selected universe only. "
+    "Validated data packs are available on request for a broader universe.",
+    icon="📊",
+)
+
+st.divider()
+
 # ── Disclaimer ─────────────────────────────────────────────────────────────────
 st.warning(
-    "**Disclaimer:** This public beta is for research and analysis support only. "
-    "It does not provide investment advice, stock recommendations, price targets or buy/sell signals. "
-    "Data may contain missing fields or documented coverage notes."
+    "**Disclaimer:** This app is for analysis support only. "
+    "It does not provide investment advice, buy/sell recommendations, stock picks or price predictions. "
+    "Data may contain missing fields or documented quality notes."
 )

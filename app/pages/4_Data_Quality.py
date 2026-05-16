@@ -8,18 +8,77 @@ from utils.load_data import load_quality, load_quality_summary, load_sources, lo
 
 st.set_page_config(page_title="Data Quality — Swiss Equity Data", layout="wide")
 
-st.title("Data Quality Overview")
+# ── Language selector ──────────────────────────────────────────────────────────
+lang = st.radio("Language / Langue", ["EN", "FR"], horizontal=True, label_visibility="collapsed")
 
-st.markdown(
-    """
+# ══════════════════════════════════════════════════════════════════════════════
+# SECTION 0 — Data Quality & Sources explanation
+# ══════════════════════════════════════════════════════════════════════════════
+if lang == "EN":
+    st.title("Data Quality and Sources")
+    st.markdown(
+        """
+Swiss Equity Data is built from company-reported annual information and structured into a
+consistent format for analysis. The dataset includes source tracking, quality notes and
+documented limitations so users can understand where the numbers come from and which fields
+require caution.
+"""
+    )
+    st.markdown(
+        """
+- Annual reports and company disclosures are used as validation sources where available.
+- Financial fields are normalized into a consistent structure.
+- Some values are reported directly by companies, while others may be calculated from reported figures.
+- Missing fields are documented instead of being filled with invented values.
+- Quality notes explain caveats such as unavailable fields, calculated metrics, restatements, split effects or company-specific reporting conventions.
+- The beta is designed for analysis support, not investment advice.
+"""
+    )
+else:
+    st.title("Qualité des données et sources")
+    st.markdown(
+        """
+Swiss Equity Data est construit à partir d'informations annuelles publiées par les sociétés
+et structurées dans un format cohérent pour l'analyse. Le dataset inclut le suivi des sources,
+des notes qualité et des limites documentées afin que l'utilisateur comprenne d'où viennent
+les chiffres et quels champs doivent être traités avec prudence.
+"""
+    )
+    st.markdown(
+        """
+- Les rapports annuels et publications des sociétés sont utilisés comme sources de validation lorsque disponibles.
+- Les champs financiers sont normalisés dans une structure cohérente.
+- Certaines valeurs sont reportées directement par les sociétés, tandis que d'autres peuvent être calculées à partir de chiffres publiés.
+- Les champs manquants sont documentés au lieu d'être remplacés par des valeurs inventées.
+- Les notes qualité expliquent les limites : champs indisponibles, métriques calculées, retraitements, effets de splits ou conventions propres à certaines sociétés.
+- La beta sert de support d'analyse, pas de conseil en investissement.
+"""
+    )
+
+st.divider()
+
+if lang == "EN":
+    st.markdown(
+        """
 This page summarizes the quality checks applied to the public beta dataset.
 Notes are classified by severity so methodological notes, acceptable limitations
 and review items are clearly separated.
 """
-)
+    )
+else:
+    st.markdown(
+        """
+Cette page résume les contrôles qualité appliqués au dataset public beta.
+Les notes sont classées par sévérité afin de distinguer les notes méthodologiques,
+les limites acceptables et les éléments à vérifier.
+"""
+    )
+
 st.info(
-    "Future versions are expected to add field-level provenance and reconciliation status between "
-    "structured provider data and annual report extraction."
+    "Future versions are expected to expand field-level provenance tracking and source reconciliation coverage."
+    if lang == "EN"
+    else
+    "Les versions futures devraient étendre le suivi de la provenance par champ et la couverture de réconciliation des sources."
 )
 
 # ── Load data ──────────────────────────────────────────────────────────────────
@@ -315,6 +374,6 @@ else:
 
 st.divider()
 st.warning(
-    "**Disclaimer:** This is a public beta. For research and analysis support only. "
-    "Not investment advice."
+    "**Disclaimer:** This app is for analysis support only. "
+    "It does not provide investment advice, buy/sell recommendations, stock picks or price predictions."
 )

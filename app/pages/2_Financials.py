@@ -191,6 +191,6 @@ st.info(
     icon="ℹ️",
 )
 st.warning(
-    "**Disclaimer:** This is a public beta. For research and analysis support only. "
-    "Not investment advice."
+    "**Disclaimer:** This app is for analysis support only. "
+    "It does not provide investment advice, buy/sell recommendations, stock picks or price predictions."
 )

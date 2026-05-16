@@ -8,13 +8,16 @@ st.set_page_config(
 )
 
 st.title("Swiss Equity Data")
-st.markdown("### Public Beta")
+st.markdown("*Traceable Swiss equity fundamentals for analysis and AI-assisted workflows.*")
 
 st.markdown(
     """
-Swiss Equity Data is a public beta showcasing normalized annual fundamentals for selected
-Swiss listed companies, enriched with transparent data quality metadata, exportable datasets
-and a basic analytics layer.
+Explore a selected public beta universe of Swiss listed companies. Swiss Equity Data is
+building a structured data layer with validated annual fundamentals, ratios, quality notes,
+documented limitations and Excel/CSV exports.
+
+A broader validated data pack is available on request, with structured Excel/CSV files,
+source tracking, field-level provenance, quality notes and documented limitations.
 
 ---
 
@@ -35,8 +38,8 @@ and a basic analytics layer.
 )
 
 st.info(
-    "**Disclaimer:** This is a public beta. Data may contain missing fields or quality flags. "
-    "Content is provided for research and analysis support only. "
-    "This is not investment advice, not stock picking, and not a buy/sell recommendation product.",
+    "**Disclaimer:** This app is for analysis support only. "
+    "It does not provide investment advice, buy/sell recommendations, stock picks or price predictions. "
+    "Data may contain missing fields or documented quality notes.",
     icon="ℹ️",
 )
