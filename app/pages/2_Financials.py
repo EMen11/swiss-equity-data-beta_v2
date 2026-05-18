@@ -206,7 +206,8 @@ else:
                 "Field-level provenance is currently available for **selected beta fields only** "
                 "(revenue, EBITDA, net income, EPS, free cash flow) and covers **fiscal years 2023–2024**. "
                 "Coverage will be expanded in future versions. "
-                "Values shown here are read-only and are not modified by this view."
+                "Values shown here are read-only and are not modified by this view. "
+                "See **Data Quality and Sources** for status definitions."
             )
 
             prov_sel["Quality"] = prov_sel["quality_status"].map(

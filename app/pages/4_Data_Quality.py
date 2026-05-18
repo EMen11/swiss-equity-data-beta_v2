@@ -377,7 +377,66 @@ st.divider()
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# SECTION 6 — Field-level provenance preview
+# SECTION 6 — Quality status guide
+# ══════════════════════════════════════════════════════════════════════════════
+if lang == "EN":
+    st.markdown("### How to read our data quality statuses")
+    with st.expander("Expand status definitions", expanded=False):
+        st.markdown(
+            """
+The beta dataset assigns one of four quality statuses to field-level provenance records.
+These statuses describe how each value was obtained and what care is needed when using it.
+
+| Status | Meaning |
+|--------|---------|
+| ✅ **Verified** | The value is available and has been checked against the source information for that company and fiscal year. |
+| 🔵 **Calculated** | The value was calculated by Swiss Equity Data from available inputs using a documented formula — for example, free cash flow = operating cash flow minus capital expenditures. |
+| ⚠️ **Usable with notes** | The value is present but carries a caveat around source labelling, definition, unit, comparability across years, or review status. Read the provenance notes before using this value in analysis. |
+| ❌ **Documented missing** | The value has been intentionally left blank because the required input is unavailable, has not been extracted yet, or cannot be derived safely from the available data. |
+
+**Missing values are documented rather than invented.** When a field cannot be reliably populated,
+it is left empty and the reason is recorded in the provenance notes.
+
+---
+
+*Not all fields in the dataset carry a provenance record.
+Field-level provenance is currently available for selected fields only
+(revenue, EBITDA, net income, EPS, free cash flow) and covers fiscal years 2023–2024.
+Fields without a provenance record are displayed normally without a badge.*
+"""
+        )
+else:
+    st.markdown("### Comment lire nos statuts de qualité")
+    with st.expander("Afficher les définitions des statuts", expanded=False):
+        st.markdown(
+            """
+Le dataset beta assigne l'un de quatre statuts de qualité aux enregistrements de provenance par champ.
+Ces statuts décrivent comment chaque valeur a été obtenue et quelle précaution est nécessaire lors de son utilisation.
+
+| Statut | Signification |
+|--------|---------------|
+| ✅ **Vérifié** | La valeur est disponible et a été vérifiée par rapport aux informations sources disponibles pour cette société et cet exercice fiscal. |
+| 🔵 **Calculé** | La valeur a été calculée par Swiss Equity Data à partir des données disponibles, selon une formule documentée — par exemple, flux de trésorerie libre = flux de trésorerie opérationnel moins les dépenses d'investissement. |
+| ⚠️ **Utilisable avec notes** | La valeur est présente mais comporte une réserve concernant le libellé de la source, la définition, l'unité, la comparabilité entre exercices ou le statut de révision. Lisez les notes de provenance avant d'utiliser cette valeur dans une analyse. |
+| ❌ **Manquante documentée** | La valeur a été intentionnellement laissée vide car la donnée requise est indisponible, n'a pas encore été extraite, ou ne peut pas être dérivée en toute sécurité à partir des données disponibles. |
+
+**Les valeurs manquantes sont documentées, non inventées.** Lorsqu'un champ ne peut pas être
+renseigné de manière fiable, il est laissé vide et la raison est consignée dans les notes de provenance.
+
+---
+
+*Tous les champs du dataset ne disposent pas d'un enregistrement de provenance.
+La provenance par champ est actuellement disponible pour des champs sélectionnés uniquement
+(chiffre d'affaires, EBITDA, résultat net, BPA, flux de trésorerie libre) et couvre les exercices 2023–2024.
+Les champs sans enregistrement de provenance sont affichés normalement sans badge.*
+"""
+        )
+
+st.divider()
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SECTION 7 — Field-level provenance preview
 # ══════════════════════════════════════════════════════════════════════════════
 if lang == "EN":
     st.markdown("### Field-level Provenance Preview")
