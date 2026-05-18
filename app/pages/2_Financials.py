@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.load_data import load_financials
+from utils.load_data import load_financials, load_field_provenance
 from utils.export_helpers import dataframe_to_csv_bytes
 
 st.set_page_config(page_title="Financials — Swiss Equity Data", layout="wide")
@@ -13,6 +13,7 @@ st.title("Financials")
 st.markdown("Normalized annual financial data for the beta universe of Swiss listed companies.")
 
 df = load_financials()
+prov_df = load_field_provenance()
 
 if df.empty:
     st.error("Financials data could not be loaded.")
@@ -174,6 +175,103 @@ else:
         st.markdown("Scores show the fraction of fields populated for each company-year (e.g. `4/7` = 4 of 7 core fields present).")
         comp_id = [c for c in ["ticker", "company_name", "fiscal_year"] if c in filtered.columns]
         st.dataframe(filtered[comp_id + completeness_cols], use_container_width=True, hide_index=True)
+
+    # ── Field-level provenance ─────────────────────────────────────────────────
+    _QUALITY_BADGE = {
+        "Verified":           "✅ Verified",
+        "Calculated":         "🔵 Calculated",
+        "Usable with notes":  "⚠️ Usable with notes",
+        "documented_missing": "❌ Documented missing",
+    }
+    _FIELD_LABEL = {
+        "revenue":        "Revenue",
+        "ebitda":         "EBITDA",
+        "net_income":     "Net Income",
+        "eps":            "EPS",
+        "free_cash_flow": "Free Cash Flow",
+    }
+
+    if not prov_df.empty:
+        prov_df["fiscal_year"] = pd.to_numeric(prov_df["fiscal_year"], errors="coerce")
+        active_years = filtered["fiscal_year"].dropna().unique().tolist() if "fiscal_year" in filtered.columns else []
+        prov_sel = prov_df[
+            prov_df["ticker"].isin(selected_tickers) &
+            prov_df["fiscal_year"].isin(active_years)
+        ].copy()
+
+        if not prov_sel.empty:
+            st.divider()
+            st.markdown("### Field-level Provenance")
+            st.caption(
+                "Field-level provenance is currently available for **selected beta fields only** "
+                "(revenue, EBITDA, net income, EPS, free cash flow) and covers **fiscal years 2023–2024**. "
+                "Coverage will be expanded in future versions. "
+                "Values shown here are read-only and are not modified by this view."
+            )
+
+            prov_sel["Quality"] = prov_sel["quality_status"].map(
+                lambda s: _QUALITY_BADGE.get(str(s), str(s))
+            )
+            prov_sel["Field"] = prov_sel["field_name"].map(
+                lambda s: _FIELD_LABEL.get(str(s), str(s))
+            )
+            prov_sel["Value"] = prov_sel.apply(
+                lambda r: "" if r["quality_status"] == "documented_missing" else (
+                    str(r["value"]) if pd.notna(r["value"]) else ""
+                ),
+                axis=1,
+            )
+
+            prov_table = prov_sel[[
+                "ticker", "fiscal_year", "Field", "Value",
+                "Quality", "source_name", "source_url", "source_page",
+                "source_label", "calculation_method", "notes",
+            ]].rename(columns={
+                "fiscal_year":        "FY",
+                "source_name":        "Source",
+                "source_url":         "URL",
+                "source_page":        "Page",
+                "source_label":       "Label",
+                "calculation_method": "Method",
+                "notes":              "Notes",
+            }).sort_values(["ticker", "FY", "Field"])
+
+            with st.expander("Show provenance detail", expanded=True):
+                st.dataframe(
+                    prov_table,
+                    use_container_width=True,
+                    hide_index=True,
+                    column_config={
+                        "Quality": st.column_config.TextColumn(
+                            "Quality",
+                            help=(
+                                "✅ Verified — directly confirmed from source document.\n"
+                                "🔵 Calculated — derived from reported figures (e.g. OCF minus Capex).\n"
+                                "⚠️ Usable with notes — value present but requires sector or methodological context.\n"
+                                "❌ Documented missing — value unavailable; reason stated in Notes."
+                            ),
+                        ),
+                        "URL": st.column_config.LinkColumn(
+                            "URL",
+                            help="Source document link. Click to open and verify the original figure.",
+                            display_text="Open ↗",
+                        ),
+                        "Page": st.column_config.TextColumn(
+                            "Page",
+                            help="Page reference within the source document. 'not available' means the page was not recorded during extraction.",
+                        ),
+                        "Method": st.column_config.TextColumn(
+                            "Method",
+                            help="How the value was obtained: directly reported by the company, or derived from other reported figures.",
+                        ),
+                        "Notes": st.column_config.TextColumn(
+                            "Notes",
+                            help="Caveats, limitations or extraction context for this specific field.",
+                            width="large",
+                        ),
+                    },
+                )
+                st.caption(f"{len(prov_table):,} provenance record(s) for the current selection.")
 
     st.divider()
     st.markdown("### Download Filtered Data")
