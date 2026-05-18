@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from utils.load_data import load_quality, load_quality_summary, load_sources, load_companies
+from utils.load_data import load_quality, load_quality_summary, load_sources, load_companies, load_field_provenance
 
 st.set_page_config(page_title="Data Quality — Swiss Equity Data", layout="wide")
 
@@ -82,10 +82,11 @@ st.info(
 )
 
 # ── Load data ──────────────────────────────────────────────────────────────────
-summary_df  = load_quality_summary()
-report_df   = load_quality()
-sources_df  = load_sources()
-companies_df = load_companies()
+summary_df      = load_quality_summary()
+report_df       = load_quality()
+sources_df      = load_sources()
+companies_df    = load_companies()
+provenance_df   = load_field_provenance()
 
 # ── Label helpers ──────────────────────────────────────────────────────────────
 def build_label_maps(*candidate_dfs: pd.DataFrame) -> tuple[dict, dict]:
@@ -371,6 +372,118 @@ else:
     sc4.metric("Source URLs pending",   src_urls_missing)
 
     st.dataframe(source_display, use_container_width=True, hide_index=True)
+
+st.divider()
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# SECTION 6 — Field-level provenance preview
+# ══════════════════════════════════════════════════════════════════════════════
+if lang == "EN":
+    st.markdown("### Field-level Provenance Preview")
+    st.info(
+        "**Beta preview — source tracking per field.** "
+        "This section shows the source document, page reference, calculation method and quality status "
+        "for individual data fields. "
+        "Provenance is currently available for selected fields only (revenue, EBITDA, net income, EPS, free cash flow) "
+        "and covers fiscal years 2023–2024. "
+        "Coverage will be expanded in future versions of the dataset.",
+        icon="🔍",
+    )
+else:
+    st.markdown("### Aperçu de la provenance par champ")
+    st.info(
+        "**Aperçu beta — suivi des sources par champ.** "
+        "Cette section indique le document source, la référence de page, la méthode de calcul et le statut qualité "
+        "pour chaque champ de données individuellement. "
+        "La provenance est actuellement disponible pour des champs sélectionnés uniquement "
+        "(chiffre d'affaires, EBITDA, résultat net, BPA, flux de trésorerie libre) "
+        "et couvre les exercices 2023–2024. "
+        "La couverture sera étendue dans les versions futures du dataset.",
+        icon="🔍",
+    )
+
+if provenance_df.empty:
+    st.warning(
+        "Field provenance data not available."
+        if lang == "EN"
+        else "Données de provenance par champ non disponibles."
+    )
+else:
+    pf1, pf2, pf3, pf4 = st.columns(4)
+
+    with pf1:
+        prov_tickers = sorted(provenance_df["ticker"].dropna().unique().tolist())
+        prov_labels  = sorted(ticker_label(t) for t in prov_tickers)
+        prov_l2t     = {ticker_label(t): t for t in prov_tickers}
+        sel_prov_labels = st.multiselect(
+            "Ticker" if lang == "EN" else "Ticker",
+            options=prov_labels,
+            default=prov_labels,
+            key="prov_ticker",
+            help="Search by ticker or company name." if lang == "EN" else "Rechercher par ticker ou nom de société.",
+        )
+        sel_prov_tickers = [prov_l2t[l] for l in sel_prov_labels if l in prov_l2t]
+
+    with pf2:
+        prov_years = sorted(provenance_df["fiscal_year"].dropna().unique().tolist())
+        sel_prov_years = st.multiselect(
+            "Fiscal year" if lang == "EN" else "Exercice fiscal",
+            options=prov_years,
+            default=prov_years,
+            key="prov_year",
+        )
+
+    with pf3:
+        prov_fields = sorted(provenance_df["field_name"].dropna().unique().tolist())
+        sel_prov_fields = st.multiselect(
+            "Field" if lang == "EN" else "Champ",
+            options=prov_fields,
+            default=prov_fields,
+            key="prov_field",
+        )
+
+    with pf4:
+        prov_statuses = sorted(provenance_df["quality_status"].dropna().unique().tolist())
+        sel_prov_statuses = st.multiselect(
+            "Quality status" if lang == "EN" else "Statut qualité",
+            options=prov_statuses,
+            default=prov_statuses,
+            key="prov_status",
+        )
+
+    filtered_prov = provenance_df.copy()
+    if sel_prov_tickers:
+        filtered_prov = filtered_prov[filtered_prov["ticker"].isin(sel_prov_tickers)]
+    if sel_prov_years:
+        filtered_prov = filtered_prov[filtered_prov["fiscal_year"].isin(sel_prov_years)]
+    if sel_prov_fields:
+        filtered_prov = filtered_prov[filtered_prov["field_name"].isin(sel_prov_fields)]
+    if sel_prov_statuses:
+        filtered_prov = filtered_prov[filtered_prov["quality_status"].isin(sel_prov_statuses)]
+
+    prov_display_cols = [c for c in [
+        "ticker", "fiscal_year", "field_name", "value",
+        "source_name", "source_type", "source_url", "source_page", "source_label",
+        "calculation_method", "quality_status", "notes",
+    ] if c in filtered_prov.columns]
+
+    if filtered_prov.empty:
+        st.info(
+            "No provenance records match the current filters."
+            if lang == "EN"
+            else "Aucun enregistrement de provenance ne correspond aux filtres actuels."
+        )
+    else:
+        st.dataframe(filtered_prov[prov_display_cols], use_container_width=True, hide_index=True)
+        st.caption(
+            f"{len(filtered_prov):,} provenance record(s) shown — selected fields only. "
+            "Financial values shown here are read-only and are not modified by this view."
+            if lang == "EN"
+            else
+            f"{len(filtered_prov):,} enregistrement(s) de provenance affiché(s) — champs sélectionnés uniquement. "
+            "Les valeurs financières affichées ici sont en lecture seule et ne sont pas modifiées par cet affichage."
+        )
 
 st.divider()
 st.warning(

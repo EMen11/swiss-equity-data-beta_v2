@@ -48,6 +48,10 @@ def load_sources() -> pd.DataFrame:
     return _safe_read("sources.csv")
 
 
+def load_field_provenance() -> pd.DataFrame:
+    return _safe_read("field_provenance.csv")
+
+
 def load_all_data() -> dict:
     return {
         "financials": load_financials(),
